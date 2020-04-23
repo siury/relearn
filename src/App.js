@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import HomePage from "./components/HomePage";
 import TacoPage from "./components/TacoPage";
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Sidebar></Sidebar>
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
           <Route exact path="/">
             <HomePage></HomePage>
@@ -22,7 +22,7 @@ function App() {
             <AboutPage />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
