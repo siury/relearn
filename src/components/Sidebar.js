@@ -8,8 +8,8 @@ export default function Sidebar() {
       </div>
       <div className="sidebarContent">
         <SidebarLink link="/" text="Home"></SidebarLink>
-        <SidebarLink link="/taco" text="Hungry?"></SidebarLink>
-        <SidebarLink link="/about" text="About Me"></SidebarLink>
+        <SidebarLink link="/#/taco" text="Hungry?"></SidebarLink>
+        <SidebarLink link="/#/about" text="About Me"></SidebarLink>
       </div>
     </section>
   );
