@@ -1,38 +1,117 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 2fr 7fr;
+  grid-template-areas: "sidebar page" "sidebar page" "sidebar page";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page {
+  grid-area: page;
+  background-color: white;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  font-size: 1.2vw;
+  color: #0c0f0a;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page h1 {
+  font-size: 1.8vw;
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page h2 {
+  font-size: 1.3vw;
+  font-weight: 600;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: yellow;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "sidebarHeader" "sidebarContent" "sidebarContent" "sidebarContent";
+}
+
+.sidebarHeader {
+  grid-area: sidebarHeader;
+  background-image: url("./img/m.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-size: 2.3vw;
+  font-weight: 600;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.sidebarContent {
+  grid-area: sidebarContent;
+  background-color: #0c0f0a;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+  padding-top: 10px;
+}
+
+.sidebarLink {
+  border: solid white 4px;
+  width: 80%;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.sidebarLink:hover {
+  transition: 0.4s;
+  border: solid #ff206e 4px;
+  cursor: pointer;
+}
+
+.sidebarLinkText {
   color: white;
+  font-size: 1.2vw;
+  font-weight: 600;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebarLinkText:hover {
+  transition: 0.4s;
+  color: #ff206e;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button {
+  border: solid #0c0f0a 4px;
+  background-color: white;
+  width: 20%;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.button:hover {
+  transition: 0.4s;
+  border: solid #ff206e 4px;
+  cursor: pointer;
+}
+
+.buttonText {
+  color: #0c0f0a;
+  font-size: 1.2vw;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.buttonText:hover {
+  transition: 0.4s;
+  color: #ff206e;
+  cursor: pointer;
+}
+
+.formFooter {
+  position: absolute;
+  bottom: 40px;
 }
